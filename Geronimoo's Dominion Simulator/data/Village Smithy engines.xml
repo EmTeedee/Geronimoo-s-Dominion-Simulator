@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<playerCollection>
+<player name="Village/Smithy engine #4"
+ author="Geronimoo"
+ description="Remodel is the final addition and it rocks!">
+ <type name="Optimized"/>
+ <type name="UserCreated"/>
+ <type name="Engine"/>
+ <type name="Bot"/>
+ <type name="Province"/>
+ <type name="Competitive"/>
+ <type name="Attacking"/>
+ <type name="Combo"/>
+ <type name="TwoPlayer"/>
+   <buy name="Province">
+      <condition>
+         <left type="countCardsInDeck" attribute="Smithy"/>
+         <operator type="greaterThan" />
+         <right type="constant" attribute="4.0"/>
+      </condition>
+   </buy>
+   <buy name="Province">
+      <condition>
+         <left type="countCardsInDeck" attribute="Province"/>
+         <operator type="greaterThan" />
+         <right type="constant" attribute="0.0"/>
+      </condition>
+   </buy>
+   <buy name="Duchy">
+      <condition>
+         <left type="countCardsInDeck" attribute="Province"/>
+         <operator type="greaterThan" />
+         <right type="constant" attribute="0.0"/>
+      </condition>
+   </buy>
+   <buy name="Estate">
+      <condition>
+         <left type="countCardsInDeck" attribute="Province"/>
+         <operator type="greaterThan" />
+         <right type="constant" attribute="0.0"/>
+      </condition>
+   </buy>
+   <buy name="Village">
+      <condition>
+         <left type="countAvailableMoney"/>
+         <operator type="equalTo" />
+         <right type="constant" attribute="7.0"/>
+      </condition>
+      <condition>
+         <left type="countBuysLeft"/>
+         <operator type="greaterThan" />
+         <right type="constant" attribute="1.0"/>
+      </condition>
+   </buy>
+   <buy name="Gold">
+      <condition>
+         <left type="countCardsInDeck" attribute="Gold"/>
+         <operator type="smallerThan" />
+         <right type="constant" attribute="2.0"/>
+      </condition>
+   </buy>
+   <buy name="Market">
+      <condition>
+         <left type="countCardsInDeck" attribute="Market"/>
+         <operator type="smallerThan" />
+         <right type="constant" attribute="3.0"/>
+      </condition>
+   </buy>
+   <buy name="Remodel">
+      <condition>
+         <left type="countCardsInDeck" attribute="Remodel"/>
+         <operator type="equalTo" />
+         <right type="constant" attribute="0.0"/>
+      </condition>
+   </buy>
+   <buy name="Militia">
+      <condition>
+         <left type="countCardsInDeck" attribute="Militia"/>
+         <operator type="equalTo" />
+         <right type="constant" attribute="0.0"/>
+      </condition>
+   </buy>
+   <buy name="Silver">
+      <condition>
+         <left type="countCardsInDeck" attribute="Silver"/>
+         <operator type="equalTo" />
+         <right type="constant" attribute="0.0"/>
+      </condition>
+      <condition>
+         <left type="countCardsInDeck" attribute="Market"/>
+         <operator type="equalTo" />
+         <right type="constant" attribute="0.0"/>
+      </condition>
+   </buy>
+   <buy name="Village">
+      <condition>
+         <left type="countCardsInDeck" attribute="Village"/>
+         <operator type="smallerThan" />
+         <right type="countCardTypeInDeck" attribute="Terminal"/>
+      </condition>
+   </buy>
+   <buy name="Smithy"/>
+   <buy name="Village"/>
+   <buy name="Cellar">
+      <condition>
+         <left type="countCardsInDeck" attribute="Cellar"/>
+         <operator type="smallerThan" />
+         <right type="constant" attribute="2.0"/>
+      </condition>
+   </buy>
+</player>
+
+<player name="Village/Smithy engine #3"
+ author="Geronimoo"
+ description="The attack of Militia slows down the big money deck just enough to give the engine a shot at winning.">
+ <type name="UserCreated"/>
+ <type name="Engine"/>
+ <type name="Bot"/>
+ <type name="Province"/>
+ <type name="Attacking"/>
+ <type name="Combo"/>
+ <type name="TwoPlayer"/>
+   <buy name="Province">
+      <condition>
+         <left type="countCardsInDeck" attribute="Smithy"/>
+         <operator type="greaterThan" />
+         <right type="constant" attribute="4.0"/>
+      </condition>
+   </buy>
+   <buy name="Province">
+      <condition>
+         <left type="countCardsInDeck" attribute="Province"/>
+         <operator type="greaterThan" />
+         <right type="constant" attribute="0.0"/>
+      </condition>
+   </buy>
+   <buy name="Duchy">
+      <condition>
+         <left type="gainsNeededToEndGame"/>
+         <operator type="smallerOrEqualThan" />
+         <right type="constant" attribute="4.0"/>
+      </condition>
+   </buy>
+   <buy name="Estate">
+      <condition>
+         <left type="gainsNeededToEndGame"/>
+         <operator type="smallerOrEqualThan" />
+         <right type="constant" attribute="2.0"/>
+      </condition>
+   </buy>
+   <buy name="Gold">
+      <condition>
+         <left type="countCardsInDeck" attribute="Gold"/>
+         <operator type="equalTo" />
+         <right type="constant" attribute="0.0"/>
+      </condition>
+   </buy>
+   <buy name="Market">
+      <condition>
+         <left type="countCardsInDeck" attribute="Market"/>
+         <operator type="smallerThan" />
+         <right type="constant" attribute="3.0"/>
+      </condition>
+   </buy>
+   <buy name="Militia">
+      <condition>
+         <left type="countCardsInDeck" attribute="Militia"/>
+         <operator type="equalTo" />
+         <right type="constant" attribute="0.0"/>
+      </condition>
+   </buy>
+   <buy name="Silver">
+      <condition>
+         <left type="countCardsInDeck" attribute="Silver"/>
+         <operator type="equalTo" />
+         <right type="constant" attribute="0.0"/>
+      </condition>
+   </buy>
+   <buy name="Village">
+      <condition>
+         <left type="countCardsInDeck" attribute="Village"/>
+         <operator type="smallerThan" />
+         <right type="countCardsInDeck" attribute="Smithy"/>
+         <extra_operation type="plus" attribute="2.0" />
+      </condition>
+   </buy>
+   <buy name="Smithy"/>
+   <buy name="Village"/>
+   <buy name="Cellar">
+      <condition>
+         <left type="countCardsInDeck" attribute="Cellar"/>
+         <operator type="smallerThan" />
+         <right type="constant" attribute="2.0"/>
+      </condition>
+   </buy>
+</player>
+
+<player name="Village/Smithy engine #2"
+ author="Geronimoo"
+ description="This engine adds +buy which improves its results dramatically.">
+ <type name="UserCreated"/>
+ <type name="Engine"/>
+ <type name="Bot"/>
+ <type name="Province"/>
+ <type name="Combo"/>
+ <type name="TwoPlayer"/>
+   <buy name="Province">
+      <condition>
+         <left type="countCardsInDeck" attribute="Smithy"/>
+         <operator type="greaterThan" />
+         <right type="constant" attribute="3.0"/>
+      </condition>
+   </buy>
+   <buy name="Province">
+      <condition>
+         <left type="countCardsInDeck" attribute="Province"/>
+         <operator type="greaterThan" />
+         <right type="constant" attribute="0.0"/>
+      </condition>
+   </buy>
+   <buy name="Duchy">
+      <condition>
+         <left type="gainsNeededToEndGame"/>
+         <operator type="smallerOrEqualThan" />
+         <right type="constant" attribute="3.0"/>
+      </condition>
+   </buy>
+   <buy name="Estate">
+      <condition>
+         <left type="gainsNeededToEndGame"/>
+         <operator type="smallerOrEqualThan" />
+         <right type="constant" attribute="2.0"/>
+      </condition>
+   </buy>
+   <buy name="Village">
+      <condition>
+         <left type="countAvailableMoney"/>
+         <operator type="equalTo" />
+         <right type="constant" attribute="7.0"/>
+      </condition>
+      <condition>
+         <left type="countBuysLeft"/>
+         <operator type="greaterThan" />
+         <right type="constant" attribute="1.0"/>
+      </condition>
+   </buy>
+   <buy name="Gold">
+      <condition>
+         <left type="countCardsInDeck" attribute="Gold"/>
+         <operator type="smallerThan" />
+         <right type="constant" attribute="1.0"/>
+      </condition>
+   </buy>
+   <buy name="Market">
+      <condition>
+         <left type="countCardsInDeck" attribute="Market"/>
+         <operator type="smallerThan" />
+         <right type="constant" attribute="4.0"/>
+      </condition>
+   </buy>
+   <buy name="Smithy">
+      <condition>
+         <left type="countCardsInDeck" attribute="Smithy"/>
+         <operator type="equalTo" />
+         <right type="constant" attribute="0.0"/>
+      </condition>
+   </buy>
+   <buy name="Silver">
+      <condition>
+         <left type="countCardsInDeck" attribute="Silver"/>
+         <operator type="equalTo" />
+         <right type="constant" attribute="0.0"/>
+      </condition>
+   </buy>
+   <buy name="Village">
+      <condition>
+         <left type="countCardsInDeck" attribute="Village"/>
+         <operator type="smallerThan" />
+         <right type="countCardsInDeck" attribute="Smithy"/>
+         <extra_operation type="plus" attribute="1.0" />
+      </condition>
+   </buy>
+   <buy name="Smithy"/>
+   <buy name="Village"/>
+</player>
+
+<player name="Village/Smithy engine #1"
+ author="Geronimoo"
+ description="This engine is the very basic one without +buy or trashing. ">
+ <type name="UserCreated"/>
+ <type name="Engine"/>
+ <type name="Bot"/>
+ <type name="Province"/>
+ <type name="Combo"/>
+ <type name="TwoPlayer"/>
+   <buy name="Province"/>
+   <buy name="Duchy">
+      <condition>
+         <left type="gainsNeededToEndGame"/>
+         <operator type="smallerOrEqualThan" />
+         <right type="constant" attribute="1.0"/>
+      </condition>
+   </buy>
+   <buy name="Estate">
+      <condition>
+         <left type="gainsNeededToEndGame"/>
+         <operator type="smallerOrEqualThan" />
+         <right type="constant" attribute="1.0"/>
+      </condition>
+   </buy>
+   <buy name="Smithy">
+      <condition>
+         <left type="countCardsInDeck" attribute="Smithy"/>
+         <operator type="equalTo" />
+         <right type="constant" attribute="0.0"/>
+      </condition>
+   </buy>
+   <buy name="Silver">
+      <condition>
+         <left type="countCardsInDeck" attribute="Silver"/>
+         <operator type="equalTo" />
+         <right type="constant" attribute="0.0"/>
+      </condition>
+   </buy>
+   <buy name="Village">
+      <condition>
+         <left type="countCardsInDeck" attribute="Village"/>
+         <operator type="smallerThan" />
+         <right type="countCardsInDeck" attribute="Smithy"/>
+         <extra_operation type="plus" attribute="1.0" />
+      </condition>
+   </buy>
+   <buy name="Smithy"/>
+   <buy name="Village"/>
+</player>
+
+</playerCollection>
